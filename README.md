@@ -2,16 +2,14 @@
 
 I couldn't find anything online with regards to configuring ASPNETCORE apps in AWS EC2 so I've shared the way I go about it.
 
-Requirements:
-=============
+## Requirements:
 
 * No environmental config sitting on the server(s)
   * This allows a new environment to be setup in AWS without any code changes
 
 * No secrets checked into source control or sitting on the server(s) (apart from Local Development config)
 
-Boot Flow
-=========
+## Boot Flow
 
 1. Check InstanceId.
    * If it's NULL, we're running locally (LocalDevelopment) - exit
