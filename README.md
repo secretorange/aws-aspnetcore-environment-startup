@@ -5,10 +5,10 @@ I couldn't find anything online with regards to configuring ASPNETCORE apps in A
 Requirements:
 =============
 
-* No environmental config sitting on the server
+* No environmental config sitting on the server(s)
   * This allows a new environment to be setup in AWS without any code changes
 
-* No secrets sitting on the server or checked into source control (apart from Local Development config)
+* No secrets checked into source control or sitting on the server(s) (apart from Local Development config)
 
 Boot Flow
 =========
