@@ -1,0 +1,10 @@
+### DOTNET
+.vs
+*/.nuget
+*/bin
+*/obj
+*/packages
+
+
+### UI
+*/node_modules/
