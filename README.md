@@ -49,3 +49,11 @@ public static IWebHost BuildWebHost()
     return webHost;
 }
 ```
+
+In order to stop your LocalDevelopment json file being published to the server when using WebDeploy, you can use the folling in the csproj:
+
+```xml
+<ItemGroup>
+    <Content Update="appsettings.LocalDevelopment.json" CopyToPublishDirectory="Never" />
+</ItemGroup>
+```
