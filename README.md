@@ -8,7 +8,7 @@ Requirements:
 * No environmental config sitting on the server
   * This allows a new environment to be setup in AWS without any code changes
 
-* Definitely no secrets sitting on the server (or checked into source control - apart from Local Development config)
+* No secrets sitting on the server or checked into source control (apart from Local Development config)
 
 Boot Flow
 =========
