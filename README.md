@@ -57,3 +57,40 @@ In order to stop your LocalDevelopment json file being published to the server w
     <Content Update="appsettings.LocalDevelopment.json" CopyToPublishDirectory="Never" />
 </ItemGroup>
 ```
+
+## Policies required by IAM Role to access tags and parameters
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Sid": "VisualEditor0",
+          "Effect": "Allow",
+          "Action": [
+              "ec2:DescribeInstances",
+              "tag:GetResources",
+              "tag:GetTagValues",
+              "tag:GetTagKeys"
+          ],
+          "Resource": "*"
+      }
+  ]
+}
+
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Sid": "VisualEditor0",
+          "Effect": "Allow",
+          "Action": "ssm:GetParametersByPath",
+          "Resource": [
+              "arn:aws:ssm:YOUR_ARN_HERE:parameter/development",
+              "arn:aws:ssm:YOUR_ARN_HERE:parameter/development/*"
+          ]
+      }
+  ]
+}
+```
